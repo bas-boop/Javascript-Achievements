@@ -1,19 +1,22 @@
 <html>
     <head>
         <title>health bar</title>
+        <link rel="stylesheet" href="kleur.css">
     </head>
     <body>
-        <meter id="health" value="10" min="0" max="10"></meter>      
-        <input type="button"></input>
-        <h1>..</h1>
+        
+    <progress id='progress' min=0 max=110 name=health value=100></progress>
+    <button id="knop">Boop</button>
+    <script>
+        document.getElementById( 'knop').addEventListener('click',function(){
+            document.getElementById( 'progress').value-=10
+            if (document.getElementById('progress').value == 0) {
+                document.getElementById("p1").innerHTML = "gameover!"
+            }
+        })
+    </script>
 
-        <script>
-            document.getElementById("health").addEventListener("click",(e)=>{
-                //Hier code om de meter leeg te maken
-                health.value -= 10
-                //Haal via het DOM de elementen binnen
-                
-            });       
-        </script>
+    <h1 id="p1">..</h1>
+
     </body>
 </html>
