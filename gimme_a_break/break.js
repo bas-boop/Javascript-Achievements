@@ -1,7 +1,7 @@
 i = document.getElementById("break_img")
 p = document.getElementById("clock")
 
-breakStart = new Date(2020, 12, 4, 15, 45, 0, 0)
+breakStart = new Date(2020, 12, 4, 15, 6, 0, 0)
 breakEnd = new Date(2020, 12, 4, 21, 15, 0, 0)
 
 e = setInterval(updateTime,1000)
