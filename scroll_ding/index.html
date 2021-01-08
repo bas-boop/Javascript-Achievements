@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        #tekst {
+            border: solid white 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tekst">Laat deze tekst groter worden!</div>
+    <br><p>ga met je muis op de tekst en scroll</p>
+
+    <script>
+        document.getElementById("tekst").addEventListener("wheel", groei); //event van scroll
+        
+        let pixels = 16;
+
+        function groei() {
+          pixels = 1 + pixels //pixels wordt groter
+          this.style.fontSize = pixels + "px"; //fontsize wordt pixels
+        }
+    </script>
+</body>
+</html>
