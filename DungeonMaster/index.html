@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="kleuren.css">
 </head>
 <body>
+    <h1>Dungeon master</h1>
+
+    <button type="button" id="button">stats</button>
+    <p id="resultaat">.</p>
+
+    <script>
+        document.getElementById("button").addEventListener("click", rollingForStats);
+        var lijst = []
+
+        function rollingForStats(){
+            lijst = []
+
+            for(var i=0; i<4; i++){
+                var random = Math.floor(Math.random()*6)+1
+                lijst.push(random)
+            }
+            console.log(lijst)
+            lijst.sort();
+            console.log(lijst);
+            var remover = lijst.shift();
+            console.log(lijst)
+            console.log(remover)
+
+            var j = 0
+            for(var i=0; i<lijst.length; i++){
+                j+=lijst[i]
+            }
+            document.getElementById("resultaat").innerHTML="het resultaat is " + j + " en het laagste getal is " + remover;
+        }
+    </script>
     
 </body>
 </html>
